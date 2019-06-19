@@ -4,7 +4,7 @@ import ListItem from "../ListItem/ListItem";
 const List = props => {
   const { items } = props;
 
-  return items.length > 0 ? (
+  return items && items.length > 0 ? (
     items.map(item => <ListItem key={item.id} {...item} />)
   ) : (
     <div> No items found.</div>
